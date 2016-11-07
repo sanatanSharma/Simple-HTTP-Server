@@ -35,7 +35,7 @@ Date: Sat, 08 Oct 2016 09:01:51 GMT
 
 {'status':'ok'}
 ```
-`Format` - curl -i 'http://<IP address/ localhost>:<port>/api/request?connId=<some ID>&timeout=<some number>'
+Format - `curl -i 'http://<IP address/ localhost>:<port>/api/request?connId=<some ID>&timeout=<some number>'`
 
 - GET API to get status: returns the `time remaining` of all the requests currently running on the server
 
@@ -47,7 +47,7 @@ Date: Sat, 08 Oct 2016 09:02:45 GMT
 
 {"12":"7"}
 ```
-`Format` - curl -i 'http://<IP address/ localhost>:<port>/api/serverStatus'
+Format - `curl -i 'http://<IP address/ localhost>:<port>/api/serverStatus'`
 
 - PUT API : kills the request with the specified `connID`
 
@@ -60,9 +60,12 @@ Date: Sat, 08 Oct 2016 09:04:31 GMT
 {'status':'killed'}
 {'status':'ok'}
 ```
-`Format` - curl -i -X PUT -d {"connId"=<some ID>} 'http://<IP address/ localhost>:<port>/api/kill'
+Format - `curl -i -X PUT -d {"connId"=<some ID>} 'http://<IP address/ localhost>:<port>/api/kill'`
 
 ### Possible error scenarios 
 
 - Error Code `400` : Invalid format of the request/ invalid values, missing values of parameters like connId and timeout.
 - Error Code `500` : A Running Request killed off.
+
+
+
